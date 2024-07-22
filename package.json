@@ -1,0 +1,23 @@
+{
+  "name": "get-list",
+  "version": "1.0.0",
+  "description": "This node is designed to send an HTTP request to the server in order to receive the necessary parameters in response after user authorization.",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "md5": "^2.3.0",
+    "node-fetch": "^3.3.2",
+    "node-red": "^2.0.0"
+  },
+  "keywords": [
+    "node-red",
+    "http",
+    "auth"
+  ],
+  "author": "",
+  "license": "",
+  "node-red": {
+    "nodes": {
+      "get-list-node": "get-list-node.js"
+    }
+  }
+}

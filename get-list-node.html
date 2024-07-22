@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('get-list-node', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            url: {value:"", required:true},
+            login: {value:"", required:true},
+            password: {value:"", required:true}
+        },
+        credentials: {
+            login: { type:"text" },
+            password: { type:"password" }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "get-list-node";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="get-list-node">
+    <div class="form-row">
+        <label for="node-input-url"><i class="icon-tag"></i> URL</label>
+        <input type="text" id="node-input-url" placeholder="http://example.com/api">
+    </div>
+    <div class="form-row">
+        <label for="node-input-login"><i class="icon-tag"></i> Login</label>
+        <input type="text" id="node-input-login">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-list-node">
+    <p>This node is designed to send an HTTP request to the server in order to receive the necessary parameters in response after user authorization.</p>
+</script>
